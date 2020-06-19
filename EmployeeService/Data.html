@@ -60,7 +60,7 @@
                 window.location.href = "Login.html";
             }
 
-            $('#spanUsername').text('Hello ' + sessionStorage.getItem('username'));
+            $('#spanUsername').text('Hello ' + sessionStorage.getItem('userName'));
 
             $('#btnLogoff').click(function () {
                 sessionStorage.removeItem('accessToken');
