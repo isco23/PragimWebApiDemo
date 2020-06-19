@@ -9,6 +9,7 @@
     <div class="col-md-10 col-md-offset-1">
         <div class="well">
             <input type="button" id="btnLoadEmployees" class="btn btn-success" value="Load All Employees" />
+            <span id="spanUsername" class="text-muted"></span>
             <input type="button" id="btnLogoff" class="btn btn-success pull-right" value="Log Off" />
         </div>
         <div class="well hidden" id="divData">
@@ -58,6 +59,8 @@
             if (sessionStorage.getItem('accessToken') == null) {
                 window.location.href = "Login.html";
             }
+
+            $('#spanUsername').text('Hello ' + sessionStorage.getItem('username'));
 
             $('#btnLogoff').click(function () {
                 sessionStorage.removeItem('accessToken');

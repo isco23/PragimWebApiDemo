@@ -64,6 +64,7 @@
                         //$('#divErrorText').text(JSON.stringify(response));
                         //$('#divError').show('fade');
                         sessionStorage.setItem('accessToken', response.access_token);
+                        sessionStorage.setItem('username', response.username);
                         window.location.href = "Data.html";
                     },
                     error: function (jqXHR) {
